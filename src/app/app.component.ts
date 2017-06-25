@@ -9,6 +9,7 @@ import { DnsClientService } from './dns-client.service'
 export class AppComponent {
   title = 'app';
   data;
+  clientInfo = new Object();
   constructor  (private dnsClientService : DnsClientService)
   {
 
@@ -19,7 +20,8 @@ export class AppComponent {
     console.log("getIPByHostName");
     var value = this.dnsClientService.getAsync(fullHostName)
     .subscribe((res) =>{
-                          console.log(res.json());    
+                          this.clientInfo=res.json().value;
+                          console.log(this.clientInfo);
                       },
     (err)=>
     {
