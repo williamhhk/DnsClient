@@ -38,7 +38,7 @@ export class GenericInputComponent implements OnInit {
     );   
   }
 
-  selectedItem(item) {
+  displayItem(item) {
     this.clientInfo1 = item;
   }
 

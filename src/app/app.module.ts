@@ -9,13 +9,15 @@ import { DnsClientService } from './dns-client.service';
 
 import { Routes } from '@angular/Router';
 import { GenericInputComponent } from './generic-input/generic-input.component';
-import { ClientInfoComponent } from './client-info/client-info.component'
+import { ClientInfoComponent } from './client-info/client-info.component';
+import { ClientInfoListComponent } from './client-info-list/client-info-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     GenericInputComponent,
-    ClientInfoComponent
+    ClientInfoComponent,
+    ClientInfoListComponent
   ],
   imports: [
     BrowserModule,

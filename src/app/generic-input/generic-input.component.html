@@ -1,13 +1,8 @@
 <input #newItem placeholder="full hostname" />
 <button (click)="queryHost(newItem)">Query</button>
-
-<ul>
-	<li *ngFor="let item of clientInfoArray"
-		(click)="selectedItem(item)"
-	>
-			{{ item.HostName }}
-	</li>
-</ul>
+<app-client-info-list [clientInfoArray]="clientInfoArray"
+(selectedItem) = "displayItem($event)"
+ > </app-client-info-list>
 
 <app-client-info [clientInfo2]="clientInfo1" ></app-client-info>
 
