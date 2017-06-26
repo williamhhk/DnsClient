@@ -8,28 +8,28 @@ import { DnsClientService } from './dns-client.service'
 })
 export class AppComponent {
   title = 'app';
-  data;
-  clientInfo = new Object();
+  // data;
+  // clientInfo = new Object();
   constructor  (private dnsClientService : DnsClientService)
   {
 
   }
 
-  getIPByHostName(fullHostName : string)
-  {
-    console.log("getIPByHostName");
-    var value = this.dnsClientService.getAsync(fullHostName)
-    .subscribe((res) =>{
-                          this.clientInfo=res.json().value;
-                          console.log(this.clientInfo);
-                      },
-    (err)=>
-    {
-      console.log(err)
-      return err;
-    }
-    );    
-  }
+  // getIPByHostName(fullHostName : string)
+  // {
+  //   console.log("getIPByHostName");
+  //   var value = this.dnsClientService.getAsync(fullHostName)
+  //   .subscribe((res) =>{
+  //                         this.clientInfo=res.json().value;
+  //                         console.log(this.clientInfo);
+  //                     },
+  //   (err)=>
+  //   {
+  //     console.log(err)
+  //     return err;
+  //   }
+  //   );    
+  // }
 
   ngOnInit () {
     // console.log(this.dnsClientService.queryClient("my-pc"));
