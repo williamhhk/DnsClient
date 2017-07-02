@@ -11,16 +11,22 @@ export class ClientInfoListComponent implements OnInit {
 //  output selected item from the list.
 
  @Input() clientInfoArray : Array<Object> = [];
- @Output() selectedItem: EventEmitter<string> = new EventEmitter();
+//  @Output() selectedItem: EventEmitter<string> = new EventEmitter();
+
+// (click)="displayItem(item)"
+
+// @Output() selectedItem: EventEmitter<string> = new EventEmitter();
+
+ @Output() selectedItem = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  displayItem(item) {
-    console.log("this is a test");
-    this.selectedItem.emit(item);
-  }
+  // displayItem(item) {
+  //   console.log(item);
+  //   this.selectedItem.emit(item);
+  // }
 
 }

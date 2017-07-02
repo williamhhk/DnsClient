@@ -8,10 +8,13 @@ import { DnsClientService } from '../dns-client.service'
 })
 export class GenericInputComponent implements OnInit {
 
-  @Output() gihostName : EventEmitter<string> = new EventEmitter();
+  // @Output() gihostName : EventEmitter<string> = new EventEmitter();
+  @Output() gihostName = new EventEmitter();
+  
   clientInfo1 = new Object();
   clientInfoArray : Array<Object> = [];
-  constructor  (private dnsClientService : DnsClientService)
+  constructor  (private dnsClientService : DnsClientService,
+                )
   {
 
   }  
